@@ -1,0 +1,47 @@
+@startuml class diagrams
+
+Class OsScheduler {
+    void startOS(void)
+    voie endOS(void)
+}
+
+class Semaphore {
+    uint32_t num_sem_
+    Semaphore(uint32_t)
+    ~~Semaphore()
+    ErrCode signalSemaphore(Semaphore)
+    ErrCode waitSemaphore(Semaphore)
+}
+
+class System {
+    System()
+    ~~System()
+    void callSystem(SysCallId)
+}
+
+@enduml
+
+@startuml sequence diagrams
+participant main
+participant OsScheduler
+participant Semaphore
+participant TaskA
+participant TaskB
+participant System
+
+main        -> OsScheduler : startOS
+OsScheduler -> TaskA       : launch
+TaskA       -> Semaphore   : waitSemaphore
+Semaphore   -> System      : callSystem
+System      -> System      : setJump(buf)
+System      -> OsScheduler : reportSystemCall
+OsScheduler -> OsScheduler : saveTaskContext
+OsScheduler -> TaskB       : launch
+TaskB       -> Semaphore   : waitSemaphore
+Semaphore   -> System      : callSystem
+System      -> OsScheduler : reportSystemCall
+OsScheduler -> OsScheduler : saveTaskContext
+OsScheduler -> TaskA       : launch
+
+
+@enduml

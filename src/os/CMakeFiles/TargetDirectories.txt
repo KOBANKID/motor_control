@@ -1,0 +1,3 @@
+/Users/Toshi/gitlab/motorcontrol/src/os/CMakeFiles/rebuild_cache.dir
+/Users/Toshi/gitlab/motorcontrol/src/os/CMakeFiles/edit_cache.dir
+/Users/Toshi/gitlab/motorcontrol/src/os/CMakeFiles/Main.dir

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Toshi/gitlab/motorcontrol/src/os/os_common.h
+
+/Users/Toshi/gitlab/motorcontrol/src/os/os_ctrl.h
+
+/Users/Toshi/gitlab/motorcontrol/src/os/os_main.cc
+stdio.h
+-
+stdlib.h
+-
+os_common.h
+/Users/Toshi/gitlab/motorcontrol/src/os/os_common.h
+os_ctrl.h
+/Users/Toshi/gitlab/motorcontrol/src/os/os_ctrl.h
+os_scheduler.h
+/Users/Toshi/gitlab/motorcontrol/src/os/os_scheduler.h
+iostream
+-
+
+/Users/Toshi/gitlab/motorcontrol/src/os/os_scheduler.h
+
